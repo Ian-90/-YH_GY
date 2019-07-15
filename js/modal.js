@@ -1,20 +1,31 @@
-// Get the modal
-const modal = document.getElementById("modal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-const img = document.getElementById("img_1");
-const modalImg = document.getElementById("modal_inner_img");
-
-img.onclick = function () {
-  console.log(this)
-  modal.style.display = "block";
-  modalImg.src = this.src;
+const openImgModal = () => {
+  document.getElementById("imgModal").style.display = "block";
 }
 
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close_img")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+const closeImgModal = () => {
+  document.getElementById("imgModal").style.display = "none";
 }
+
+var slideIndex = 1;
+
+const showSlides = (n) => {
+  const slides = document.getElementsByClassName("slides");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+
+showSlides(slideIndex);
+
+const plusSlides = (n) => {
+  showSlides(slideIndex += n);
+}
+
+const currentSlide = (n) => {
+  showSlides(slideIndex = n);
+}
+

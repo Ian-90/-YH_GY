@@ -39,29 +39,54 @@
       <div class="photo_title">사진 갤러리</div>
         <div class="row"> 
           <div class="column">
-            <img src="./assets/1.jpeg" id="img_1">
-            <div id="modal" class="modal_1">
-              <span class="close_img">&times;</span>
-              <img class="modal-content" id="modal_inner_img" />
-            </div>
-            <img src="./assets/4.jpeg">
+            <img src="./assets/1.jpeg" onclick="openImgModal();currentSlide(1)" class="hover-shadow cursor">
+            <img src="./assets/4.jpeg" onclick="openImgModal();currentSlide(4)" class="hover-shadow cursor">
             <!-- <img src="./assets/7.jpg">
             <img src="./assets/10.jpg"> -->
           </div>
           <div class="column">
-            <img src="./assets/2.jpeg">
-            <img src="./assets/5.jpeg">
+            <img src="./assets/2.jpeg" onclick="openImgModal();currentSlide(2)" class="hover-shadow cursor">
+            <img src="./assets/5.jpeg" onclick="openImgModal();currentSlide(5)" class="hover-shadow cursor">
             <!-- <img src="./assets/8.jpg">
             <img src="./assets/11.jpg">
             <img src="./assets/12.jpg"> -->
           </div> 
           <div class="column">
-            <img src="./assets/3.jpeg">
-            <img src="./assets/6.jpeg">
+            <img src="./assets/3.jpeg" onclick="openImgModal();currentSlide(3)" class="hover-shadow cursor">
+            <img src="./assets/6.jpeg" onclick="openImgModal();currentSlide(6)" class="hover-shadow cursor">
             <!-- <img src="./assets/9.jpg">
             <img src="./assets/13.jpg"> -->
           </div>
         </div>
+        <div id="imgModal" class="modal">
+            <span class="closeModal cursor" onclick="closeImgModal()">&times;</span>
+            <div class="modal-content">        
+              <div class="slides">
+                <img src="./assets/1.jpeg" style="width:100%">
+              </div>
+          
+              <div class="slides">
+                <img src="./assets/2.jpeg" style="width:100%">
+              </div>
+          
+              <div class="slides">
+                <img src="./assets/3.jpeg" style="width:100%">
+              </div>
+              
+              <div class="slides">
+                <img src="./assets/4.jpeg" style="width:100%">
+              </div>
+              
+              <div class="slides">
+                <img src="./assets/5.jpeg" style="width:100%">
+              </div>
+
+              <div class="slides">
+                <img src="./assets/6.jpeg" style="width:100%">
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
       </article>
   </section>
   <script src='./js/modal.js'></script>
