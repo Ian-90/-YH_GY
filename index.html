@@ -5,38 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='//fonts.googleapis.com/earlyaccess/kopubbatang.css'>
   <title>YOHAN & GAYOUNG</title>
 </head>
 <body>
   <header class="header">
-    <div class="header_img">
-      <p>09.29</p>
+    <div class="header_main"></div>
+    <div class="header_img"> </div>
+    <div class="wedding_description">
+      <p>
+        내 전부를 주어도<br> 아깝지 않은 사람을 만나<br>
+        믿음과 사랑으로 하나되어<br>
+        삶의 여행을 함께 떠나려 합니다.<br>
+        저희 여행의 출발점에 여러분을 초대하오니<br>
+        함께 자리하시어 축복해 주시기 바랍니다.
+      </p>
+      <p>(故)이가선, 차정자 의 아들 요한<br>이용희, 김미경 의 딸 가영</p>
     </div>
-    <div class="header_wedding_date">
+    <!-- <div class="header_wedding_date">
       <span>이요한 & 이가영</span>
       <span>2019. 09. 29(일) 12:00PM</span>
       <span>토브헤세드</span>
-    </div>
+    </div> -->
   </header>
   <section>
     <article>
-      <div class="wedding_description">
-          <p>
-            내 전부를 주어도 아깝지 않은 사람을 만나<br>
-            믿음과 사랑으로 하나되어<br>
-            삶의 여행을 함께 떠나려 합니다.<br>
-            저희 여행의 출발점에 여러분을 초대하오니<br>
-            함꼐 자리하시어 축복해 주시기 바랍니다.
-          </p>
-        </div>
-        <div class="wedding_parent">
-          <p>(故)이가선, 차정자 의 아들 요한</p>
-          <p>이용희, 김미경 의 딸 가영</p>
-        </div>
+      <!-- <div class="wedding_description">
+        <p>
+          내 전부를 주어도 아깝지 않은 사람을 만나<br>
+          믿음과 사랑으로 하나되어<br>
+          삶의 여행을 함께 떠나려 합니다.<br>
+          저희 여행의 출발점에 여러분을 초대하오니<br>
+          함꼐 자리하시어 축복해 주시기 바랍니다.
+        </p>
+      </div> -->
     </article>  
     <article>
-      <div class="photo_title">사진 갤러리</div>
+      <div class="photo_title">포토 갤러리</div>
         <div class="row"> 
           <div class="column">
             <img src="./assets/1.jpeg" onclick="openImgModal();currentSlide(1)" class="hover-shadow cursor">
@@ -85,11 +90,28 @@
       </article>
       <article>
         <div class="map_title">찾아오시는 길</div>
-        <div id="map">
-          <iframe src="https://map.kakao.com/?urlX=507236&urlY=1116421&urlLevel=3&itemId=1298988185&q=%ED%86%A0%EB%B8%8C%ED%97%A4%EC%84%B8%EB%93%9C&srcid=1298988185&map_type=TYPE_MAP" width="100%" height="500px" scrolling="auto"></iframe>
+        <div id="map" style="width:100%;height:400px;"></div>
+        <div class="vehicles">
+          <dl>
+            <dt>지하철</dt>
+            <dd>7호선 학동역 10번 출구 (도보 5분)</dd>
+            <dd>셔틀버스가 학동역 10번 출구에서 10분 간격으로 운행합니다</dd>
+            <dt>버스</dt>
+            <dd>언북중학교 입구 정류장 하차</dd>
+            <dd>간선버스(파랑): 145, 440</dd>
+            <dd>지선버스(초록): 4212</dd>
+            <dd>서울 세관 정류장 하차</dd>
+            <dd>간선버스(파랑): 141</dd>
+            <dd>직행버스(빨강): 3600</dd>
+            <dt>주차</dt>
+            <dd>주차요원의 안내를 받으세요</dd>
+            <dd>2시간 무료(교통이 혼잡하오니 가급적 대중교통을 이용하시기 바랍니다)</dd>
+          </dl>
         </div>
       </article>
   </section>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cc43127f2842d13be5e073a1bf5e1ab8&libraries=services,clusterer,drawing"></script>
   <script src='./js/modal.js'></script>
+  <script src='./js/map.js'></script>
 </body>
 </html>
