@@ -28,3 +28,18 @@ const plusSlides = (n) => {
 const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
+
+function swipeleftHandler( event ){
+  // swipeleftHandler 라는 함수가 호출되면
+  $( event.target ).on(plusSlides(-1));
+      // 이걸 호출한 바로 그 대상이 타겟이 되어 클래스 swipeleft 를 넣어준다.
+}
+
+function swiperightHandler( event ){
+  // swipeleftHandler 라는 함수가 호출되면
+  $( event.target ).on(plusSlides(1));
+      // 이걸 호출한 바로 그 대상이 타겟이 되어 클래스 swipeleft 를 넣어준다.
+}
+  
+$( ".modal-content" ).on( "swipeleft", swipeleftHandler );
+$( ".modal-content" ).on( "swiperight", swiperightHandler );
