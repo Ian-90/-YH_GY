@@ -28,3 +28,14 @@ const plusSlides = (n) => {
 const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
+
+$(".modal").on( "swipeleft", swipeleftHandler );
+$(".modal").on( "swiperight", swipeRightHandler );
+
+function swipeleftHandler() {
+  return plusSlides(1)
+}
+
+function swipeRightHandler() {
+  return plusSlides(-1)
+}
