@@ -29,13 +29,28 @@ const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
 
-$(".modal").on( "swipeleft", swipeleftHandler );
-$(".modal").on( "swiperight", swipeRightHandler );
+let startX = null
+let endX = null
 
-function swipeleftHandler() {
-  return plusSlides(1)
+const touchStart = (event) => {
+  event.preventDefault();
+  startX = event.changedTouches[0].screenX
 }
 
-function swipeRightHandler() {
-  return plusSlides(-1)
+const touchMove = (event) => {
+  event.preventDefault();
 }
+
+const touchEnd = () => {
+  event.preventDefault();
+  endX = event.changedTouches[0].screenX
+  if (startX < endX) {
+    plusSlides(-1) 
+  } else {
+    plusSlides(1)
+  }
+}
+
+document.getElementById("imgModal").addEventListener('touchstart', touchStart)
+document.getElementById("imgModal").addEventListener('touchmove', touchMove)
+document.getElementById("imgModal").addEventListener('touchend', touchEnd)
