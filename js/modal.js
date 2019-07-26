@@ -46,11 +46,16 @@ const touchEnd = () => {
   endX = event.changedTouches[0].screenX
   if (startX < endX) {
     plusSlides(-1) 
-  } else {
+  } else if (startX > endX) {
     plusSlides(1)
+  } else {
+    return null
   }
 }
 
 document.getElementById("imgModal").addEventListener('touchstart', touchStart)
 document.getElementById("imgModal").addEventListener('touchmove', touchMove)
 document.getElementById("imgModal").addEventListener('touchend', touchEnd)
+document.getElementsByClassName('closeModal')[0].addEventListener('touchend', closeImgModal)
+document.getElementsByClassName("prev")[0].addEventListener('touchstart', () => plusSlides(-1))
+document.getElementsByClassName("next")[0].addEventListener('touchstart', () => plusSlides(1))

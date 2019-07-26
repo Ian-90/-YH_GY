@@ -10,7 +10,6 @@
   height: 100%;
   overflow: auto;
   background-color: black;
-  touch-action: none; 
 }
 
 /* Modal Content */
@@ -25,6 +24,7 @@
 
 /* The Close Button */
 .closeModal {
+  touch-action: none; 
   color: white;
   position: absolute;
   top: 10px;
